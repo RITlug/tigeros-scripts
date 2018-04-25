@@ -1,24 +1,20 @@
 Name:           tigeros-scripts
 Version:        1.0
 Release:        4%{?dist}
-Summary:        TigerOS setup scripts
+Summary:        TigerOS RIT courses setup scripts
+
 License:        GPLv3
-URL:            https://github.com/RITlug/TigerOS
-#tarball created with:
-#   svn export https://github.com/RITlug/TigerOS/trunk/scripts/ tigeros-scripts-%{version}
-#   tar -cf tigeros-scripts.tar.gz tigeros-scripts-%{version}/
-Source0:    %{name}.tar.gz
-BuildArch:  noarch
-BuildRequires: svn
-BuildRequires: tar
+URL:            https://github.com/RITlug/tigeros-scripts
+Source0:        %{name}-%{version}-%{release}.tar.gz
+
+BuildArch:      noarch
+
 %description
-Custom scripts for the TigerOS Fedora Remix
+Custom scripts for the TigerOS Fedora Remix that
+install packages for specific majors within RIT.
 
 %prep
 %setup -q
-
-%build
-echo "We don't need to build"
 
 %install
 %{__mkdir_p} %{buildroot}/etc/skel/.config/autostart/
@@ -49,3 +45,6 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 /etc/skel/.config/autostart/tigeros-postinstall.desktop
 
 %changelog
+* Sun Apr 01 Tim Zabel <tjz8659@rit.edu> - 1.0-4
+- Updated syntax
+- Changed summary
