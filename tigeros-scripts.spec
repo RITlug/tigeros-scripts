@@ -45,6 +45,6 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 /etc/skel/.config/autostart/tigeros-postinstall.desktop
 
 %changelog
-* Sun Apr 01 Tim Zabel <tjz8659@rit.edu> - 1.0-4
+* Sun Apr 01 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-4
 - Updated syntax
 - Changed summary
