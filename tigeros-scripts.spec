@@ -8,6 +8,7 @@ URL:            https://github.com/RITlug/tigeros-scripts
 Source0:        %{name}-%{version}-%{release}.tar.gz
 
 BuildArch:      noarch
+Requires:       bash
 
 %description
 Custom scripts for the TigerOS Fedora Remix that
