@@ -23,7 +23,7 @@ do
     case $opt in
         "CS")
             echo -e "Welcome to the TigerOS CS package installer script.\n 
-This script will install Intellij IDEA, PyCharm, PROLOG, Racket, Logisim and JFLAP on your machine."
+This script will install Intellij IDEA, PROLOG, and Racket onto your machine."
             echo
             while true; do
                 read -p "Do you wish to continue? [y/n] " yn
@@ -33,16 +33,10 @@ This script will install Intellij IDEA, PyCharm, PROLOG, Racket, Logisim and JFL
                 esac
             done
             bash /usr/local/bin/cs/idea.sh
-            #TODO fix this when copr is stable
-            #dnf copr enable -y phracek/PyCharm; dnf install pycharm-community;
-	        dnf install https://copr-be.cloud.fedoraproject.org/results/phracek/PyCharm/fedora-25-x86_64/00549395-pycharm-community/pycharm-community-2017.1.2-1.fc25.x86_64.rpm \
-                https://copr-be.cloud.fedoraproject.org/results/phracek/PyCharm/fedora-25-x86_64/00549395-pycharm-community/pycharm-community-plugins-2017.1.2-1.fc25.x86_64.rpm
             # TODO PROLOG
             wget https://mirror.racket-lang.org/installers/6.8/racket-6.8-x86_64-linux.sh
             chmod +x racket-6.8-x86_64-linux.sh
             bash racket-6.8-x86_64-linux.sh
-            bash /usr/local/bin/cs/logisim.sh
-            bash /usr/local/bin/cs/jflap.sh
             exit
             ;;
         "IT/WMC")
@@ -73,7 +67,7 @@ Please note that the JDK is already installed and accesibble on your system."
             ;;
         "NSSA/CIT")
             echo -e "Welcome to the TigerOS NSSA/CIT package installer script.\n 
-This script will install wireshark, python 2.7, and python 3 on your machine."
+This script will install wireshark, and python 3 onto your machine."
             echo
             while true; do
                 read -p "Do you wish to continue? [y/n] " yn
@@ -82,7 +76,7 @@ This script will install wireshark, python 2.7, and python 3 on your machine."
                     [Nn]* ) exit;;
                 esac
             done
-            dnf install -y wireshark-gtk python python3 java-1.8.0-openjdk
+            dnf install -y wireshark-gtk python3 java-9-openjdk
             groupadd wireshark
             usermod -aG wireshark $USER
             echo -e "Due to licensing constraints we cannot distribute jGrasp at this time.\n
