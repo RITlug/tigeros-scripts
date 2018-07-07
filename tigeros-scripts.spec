@@ -26,8 +26,6 @@ install -p -m 755 removal %{buildroot}%{_prefix}/local/bin/removal
 install -p -m 755 postinstall %{buildroot}%{_prefix}/local/bin/postinstall
 %{__mkdir_p} %{buildroot}%{_prefix}/local/bin/cs
 install -p -m 755 cs/idea.sh %{buildroot}%{_prefix}/local/bin/cs/idea.sh
-install -p -m 755 cs/jflap.sh %{buildroot}%{_prefix}/local/bin/cs/jflap.sh
-install -p -m 755 cs/logisim.sh %{buildroot}%{_prefix}/local/bin/cs/logisim.sh
 %{__mkdir_p} %{buildroot}%{_prefix}/local/bin/se
 install -p -m 755 se/alloy.sh %{buildroot}%{_prefix}/local/bin/se/alloy.sh
 install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
@@ -38,8 +36,6 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 %{_prefix}/local/bin/postinstall
 %{_prefix}/local/bin/cs/
 %{_prefix}/local/bin/cs/idea.sh
-%{_prefix}/local/bin/cs/jflap.sh
-%{_prefix}/local/bin/cs/logisim.sh
 %{_prefix}/local/bin/se/
 %{_prefix}/local/bin/se/alloy.sh
 %{_prefix}/local/bin/se/spin.sh
@@ -48,6 +44,7 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 %changelog
 * Sat Jul 07 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-5
 * Updated postinstall, removal scripts
+* removed jflap, logisim scripts
 
 * Sun Apr 01 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-4
 - Updated syntax
