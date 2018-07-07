@@ -43,7 +43,7 @@ This script will install Intellij IDEA, PyCharm, PROLOG, and Racket onto your ma
             ;;
         "IT/WMC")
             echo -e "Welcome to the TigerOS IT/WMC package installer script.\n
-This script will install mysql, mongodb, subversion, filezilla, and nodejs on your machine."
+This script will install mysql, mongodb, subversion, filezilla, java, and nodejs on your machine."
             echo
             while true; do
                 read -p "Do you wish to continue? [y/n] " yn
@@ -58,7 +58,7 @@ This script will install mysql, mongodb, subversion, filezilla, and nodejs on yo
             echo "mysql installed see "https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" for further instructions. Start at step 4."
             dnf install -y mongodb
             semanage port -a -t mongod_port_t -p tcp 27017
-            dnf install -y subversion filezilla nodejs java-1.8.0-openjdk
+            dnf install -y subversion filezilla nodejs java-9-openjdk
             echo -e "Due to licensing constraints we cannot distribute jGrasp at this time.\n
 Please see http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html for download instructions.\n
 Please note that the JDK is already installed and accesibble on your system."
@@ -69,7 +69,7 @@ Please note that the JDK is already installed and accesibble on your system."
             ;;
         "NSSA/CIT")
             echo -e "Welcome to the TigerOS NSSA/CIT package installer script.\n 
-This script will install wireshark, and python 3 onto your machine."
+This script will install wireshark, java, and python 3 onto your machine."
             echo
             while true; do
                 read -p "Do you wish to continue? [y/n] " yn
