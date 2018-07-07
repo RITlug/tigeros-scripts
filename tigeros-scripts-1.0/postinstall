@@ -23,7 +23,7 @@ do
     case $opt in
         "CS")
             echo -e "Welcome to the TigerOS CS package installer script.\n 
-This script will install Intellij IDEA, PROLOG, and Racket onto your machine."
+This script will install Intellij IDEA, PyCharm, PROLOG, and Racket onto your machine."
             echo
             while true; do
                 read -p "Do you wish to continue? [y/n] " yn
@@ -33,6 +33,8 @@ This script will install Intellij IDEA, PROLOG, and Racket onto your machine."
                 esac
             done
             bash /usr/local/bin/cs/idea.sh
+            # pycharm can now be installed through dnf
+            dnf install -y pycharm-community
             # TODO PROLOG
             wget https://mirror.racket-lang.org/installers/6.8/racket-6.8-x86_64-linux.sh
             chmod +x racket-6.8-x86_64-linux.sh
