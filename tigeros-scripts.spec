@@ -21,7 +21,6 @@ install packages for specific majors within RIT.
 %{__mkdir_p} %{buildroot}/etc/skel/.config/autostart/
 install -p -m 755 tigeros-postinstall.desktop %{buildroot}/etc/skel/.config/autostart/tigeros-postinstall.desktop
 %{__mkdir_p} %{buildroot}%{_prefix}/local/bin
-install -p -m 755 enablerpmfusion %{buildroot}%{_prefix}/local/bin/enablerpmfusion
 install -p -m 755 removal %{buildroot}%{_prefix}/local/bin/removal
 install -p -m 755 postinstall %{buildroot}%{_prefix}/local/bin/postinstall
 %{__mkdir_p} %{buildroot}%{_prefix}/local/bin/cs
@@ -31,7 +30,6 @@ install -p -m 755 se/alloy.sh %{buildroot}%{_prefix}/local/bin/se/alloy.sh
 install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 
 %files
-%{_prefix}/local/bin/enablerpmfusion
 %{_prefix}/local/bin/removal
 %{_prefix}/local/bin/postinstall
 %{_prefix}/local/bin/cs/
