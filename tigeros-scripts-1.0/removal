@@ -31,10 +31,7 @@ This script will remove Intellij idea, PyCharm, prolog, racket, and JFLAP from y
                 esac
             done
             bash /usr/local/bin/cs/idea.sh --remove       # removes Intellij IDEA
-            bash /usr/local/bin/cs/logisim.sh --remove    # removes logisim
-            bash /usr/local/bin/cs/jflap.sh --remove      # removes JFLAP
             dnf remove -y pycharm-community
-            rm /etc/yum.repos.d/_copr_phracek-PyCharm.repo
             echo "Removal finished."
             exit
             ;;
