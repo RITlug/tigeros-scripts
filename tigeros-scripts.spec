@@ -19,7 +19,7 @@ install packages for specific majors within RIT.
 
 %install
 %{__mkdir_p} %{buildroot}/etc/skel/.config/autostart/
-install -p -m 755 tigeros-postinstall.desktop %{buildroot}/etc/skel/.config/autostart/tigeros-postinstall.desktop
+install -p -m 644 tigeros-postinstall.desktop %{buildroot}/etc/skel/.config/autostart/tigeros-postinstall.desktop
 %{__mkdir_p} %{buildroot}%{_prefix}/local/bin
 install -p -m 755 removal %{buildroot}%{_prefix}/local/bin/removal
 install -p -m 755 postinstall %{buildroot}%{_prefix}/local/bin/postinstall
