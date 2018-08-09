@@ -41,8 +41,8 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 
 %changelog
 * Sat Jul 07 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-5
-* Updated postinstall, removal scripts
-* removed jflap, logisim scripts
+- Updated postinstall, removal scripts
+- Removed jflap, logisim scripts
 
 * Sun Apr 01 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-4
 - Updated syntax
