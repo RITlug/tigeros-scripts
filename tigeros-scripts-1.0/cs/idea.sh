@@ -1,19 +1,37 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # IntelliJ installer script for TigerOS
 # author: Josh Bicking <jhb2345@rit.edu>
 
-DEPS=java-1.8.0-openjdk
+#
+# idea.sh
+#
+# Copyright (C) 2018  RIT Linux Users Group  All rights reserved.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+DEPS=java-9-openjdk
 PROG="IntelliJ IDEA Community Edition"
 PROG_SHORT=idea-ce
 VERSION=idea-IC-171.4073.35
-TEMP_FILE=/tmp/ideaIC-2017.1.1.tar.gz
+TEMP_FILE=/tmp/ideaIC-2018.2.5.tar.gz
 FILE_DIR=/usr/local
 FILE=$FILE_DIR/$VERSION/bin/idea.sh
-FILE_URL=https://download.jetbrains.com/idea/ideaIC-2017.1.1.tar.gz
+FILE_URL=https://download.jetbrains.com/idea/ideaIC-2018.2.5.tar.gz
 LINK=$FILE_DIR/bin/$PROG_SHORT
 ICON=$FILE_DIR/$VERSION/bin/idea.png
-
 
 # Check that the current user is root
 if [ $EUID != 0 ]
@@ -25,8 +43,7 @@ fi
 ## Removal
 # Check if remove flag was passed
 if [ ! -z "$1" ] && [ "$1" = "--remove" ]
-  then
-
+then
     rm $LINK
     rm /usr/local/share/applications/jetbrains-idea-ce.desktop
     rm -rf $FILE_DIR/$VERSION
@@ -36,7 +53,6 @@ if [ ! -z "$1" ] && [ "$1" = "--remove" ]
     do 
         rm -f /home/$i/.local/share/applications/jetbrains-idea-ce.desktop
     done
-
 else 
 
     ## Installation
@@ -68,8 +84,8 @@ Terminal=false
 Categories=Development;IDE;Java;
 StartupWMClass=jetbrains-idea-ce
 EOF
-
     # Clean up
     rm $TEMP_FILE
-
 fi
+
+exit 0
