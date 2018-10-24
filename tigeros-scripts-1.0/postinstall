@@ -96,6 +96,7 @@ This script will install wireshark, java, and python 3 onto your machine."
                     [Nn]* ) exit;;
                 esac
             done
+            # Install packages one at a time in case one fails
             dnf install -y wireshark-gtk python3 java-9-openjdk
             groupadd wireshark
             usermod -aG wireshark $USER
@@ -117,7 +118,8 @@ This script will install ruby, eclipse, Spin, sqlite3, plantUML, gitk and MIT Al
                 esac
             done
             dnf install -y eclipse-jdt ruby sqlite plantuml gitk geany
-            bash /usr/local/bin/se/spin.sh && bash /usr/local/bin/se/alloy.sh 
+            bash /usr/local/bin/se/spin.sh
+            bash /usr/local/bin/se/alloy.sh 
             echo "Install finished"
             exit
             ;;

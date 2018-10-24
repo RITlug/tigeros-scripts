@@ -65,7 +65,7 @@ This script will remove mysql, mongodb, subversion, filezilla, and nodejs from y
                     [Nn]* ) exit;;
                 esac
             done
-            sudo dnf -y remove mongodb subversion filezilla nodejs php mysql-repo.rpm mysql-community-server
+            sudo dnf -y remove mongodb subversion filezilla nodejs php mysql-repo.rpm mysql-community-server --ignore-missing
             semanage port -d -t mongod_port_t -p tcp 27017
             echo "Removal finished."
             exit
@@ -81,7 +81,7 @@ This script will remove wireshark, python 2.7, and python 3 from your machine."
                     [Nn]* ) exit;;
                 esac
             done
-            sudo dnf -y remove wireshark --ignore-missing
+            sudo dnf -y remove wireshark-gtk --ignore-missing
             echo "Removal finished."
             exit
             ;;
