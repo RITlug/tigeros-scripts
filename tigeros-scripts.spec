@@ -1,6 +1,6 @@
 Name:           tigeros-scripts
 Version:        1.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        TigerOS RIT courses setup scripts
 
 License:        GPLv3
@@ -40,6 +40,10 @@ install -p -m 755 se/spin.sh %{buildroot}%{_prefix}/local/bin/se/spin.sh
 /etc/skel/.config/autostart/tigeros-postinstall.desktop
 
 %changelog
+* Wed Oct 17 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-6
+- Fedora 29 Build
+- Updated install scripts
+
 * Sat Jul 07 2018 Tim Zabel <tjz8659@rit.edu> - 1.0-5
 - Updated postinstall, removal scripts
 - Removed jflap, logisim scripts
